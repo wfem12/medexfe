@@ -1,6 +1,7 @@
 import Page from "../../UX/Page/Page";
 import Input from "../../UX/Forms/Input";
 import { PrimaryButton, SecondaryButton } from "../../UX/Forms/Button";
+import Nav from "../../UX/Nav/Nav";
 const SignIn = ({
   txtCorreoValue,
   txtPasswordValue,
@@ -10,7 +11,7 @@ const SignIn = ({
   onConfirmClick,
   onCancelClick })=> {
   return (
-    <Page header={(<h2>&nbsp;Crear Cuenta</h2>)}>
+    <Page header={(<h2>&nbsp;Crear Cuenta</h2>)} footer={<Nav/>}>
       <section>
         <Input
           label="Correo Electrónico"
