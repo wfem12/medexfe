@@ -1,6 +1,6 @@
-import Page from "../UX/Page/Page";
-import Input from "../UX/Forms/Input";
-import { PrimaryButton, SecondaryButton } from "../UX/Forms/Button";
+import Page from "../../UX/Page/Page";
+import Input from "../../UX/Forms/Input";
+import { PrimaryButton, SecondaryButton } from "../../UX/Forms/Button";
 const SignIn = ({
   txtCorreoValue,
   txtPasswordValue,
