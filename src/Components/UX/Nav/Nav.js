@@ -2,35 +2,35 @@ import { useSelector } from "react-redux"
 import { NavLink, useLocation } from "react-router-dom";
 
 import "./Nav.css";
-const Nav = ()=>{
-    const {_id, role} = useSelector((state)=>state.security);
+const Nav = () => {
+    const { _id, roles } = useSelector((state) => state.security);
     const currentLocation = useLocation();
-    return(
+    return (
         <nav>
             <ul>
                 <li>
-                    <NavLink to='/'
-                    className={currentLocation.pathname === '/'?'active':''}
+                    <NavLink
+                        to='/'
+                        className={currentLocation.pathname === '/' ? 'active' : ''}
                     >
-                    Home
+                        Home
                     </NavLink>
                 </li>
-
                 <li>
-                    <NavLink to='/Login'
-                    className={currentLocation.pathname === '/Login'?'active':''}
+                    <NavLink to='/login'
+                        className={currentLocation.pathname === '/login' ? 'active' : ''}
                     >
-                    Login
+                        Login
                     </NavLink>
-                    </li>
-
+                </li>
                 <li>
-                    <NavLink to='/Signin'
-                    className={currentLocation.pathname === '/Signin'?'active':''}
+                    <NavLink
+                        to='/signin'
+                        className={currentLocation.pathname === '/signin' ? 'active' : ''}
                     >
-                    Signin
+                        Signin
                     </NavLink>
-                    </li>
+                </li>
             </ul>
         </nav>
     );

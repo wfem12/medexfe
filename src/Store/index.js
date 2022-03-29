@@ -1,9 +1,14 @@
 import { createStore } from "redux";
 import { rootReducer } from "./Reduces";
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
-const store = createStore(
-    rootReducer,
-    window._REDUX_DEVTOOLS_EXTENSION_ && window._REDUX_DEVTOOLS_EXTENSION_()
-    );
+const persistRootReducer = persistReducer({ key: 'anyValue', storage }, rootReducer);
 
-export default store;
+export const store = createStore(
+    persistRootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+export const persistor = persistStore(store);
+// export default  = { store, persistor };

@@ -1,4 +1,4 @@
-import { setJWT } from "../../../Lib/apiClient";
+import { setJWT } from '../../../Lib/apiClient';
 const defaultSecurity = {
     email: '',
     jwtToken: '',
